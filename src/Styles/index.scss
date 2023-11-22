@@ -10,9 +10,9 @@
 @import "./layouts/header.scss";
 // @import "./layouts/footer.scss";
 // @import "./layouts/banner.scss";
-// @import "./layouts/carousel.scss";
+@import "./layouts/sections.scss";
 
-// @import "./pages/accueil.scss";
+@import "./pages/landing.scss";
 // @import "./pages/about.scss";
 // @import "./pages/logement.scss";
 // @import "./pages/erreur.scss";
