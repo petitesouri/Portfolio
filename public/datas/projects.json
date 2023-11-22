@@ -1,0 +1,14 @@
+[
+    {
+        "id": "p1a2023",
+        "title": "TITRE 1",
+        "cover": "./images/Argent Bank.png",
+        "description": "DESCRIPTION"
+    },
+    {
+        "id": "p2a2023",
+        "title": "TITRE 2",
+        "cover": "./images/Argent Bank.png",
+        "description": "DESCRIPTION"
+    }
+]
