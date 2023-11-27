@@ -1,0 +1,17 @@
+.dots { 
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_dot {
+        background-color: $sand-color;
+        width: 15px;
+        height: 30px;
+        border-radius: 10px;
+        box-shadow: 7px 1px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+    &_dot.selected {
+        background-color: $yellow-color;
+    }
+}

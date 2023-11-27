@@ -1,4 +1,8 @@
 main {
+    // min-height: 100vh;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    // justify-content: space-between;
+    padding: 25px 138px;
+    gap: 5px;
 }

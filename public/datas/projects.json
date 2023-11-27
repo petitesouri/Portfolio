@@ -1,14 +1,26 @@
 [
     {
         "id": "p1a2023",
-        "title": "TITRE 1",
-        "cover": "/images/Argent Bank.png",
-        "description": "DESCRIPTION"
+        "title": "CRÉER",
+        "cover": "/images/Portfolio.png",
+        "description": "Mon dernier projet. J'ai pu laisser s'exprimer ma créativité."
     },
     {
         "id": "p2a2023",
-        "title": "TITRE 2",
+        "title": "INTÉGRER",
         "cover": "/images/Argent Bank.png",
-        "description": "DESCRIPTION"
+        "description": "Au coeur de cette intégration: la gestion des états avec REDUX, sans oublier la sécurité of course!"
+    },
+    {
+        "id": "p3a2023",
+        "title": "DÉVELOPPER",
+        "cover": "/images/Kasa.png",
+        "description": "Comment se servir de ce  que l'on a déjà créer? Il n'y a pas de petites économies d'énergie."
+    },
+    {
+        "id": "p4a2023",
+        "title": "OPTIMISER",
+        "cover": "/images/Sophie Bluel.png",
+        "description": "Mes premiers pas en Javascript, ça méritait d'être en première page."
     }
 ]

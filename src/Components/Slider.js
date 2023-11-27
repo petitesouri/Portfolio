@@ -1,33 +1,27 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-
+import { useDispatch } from "react-redux"; 
 
 const VerticalSlider = ({ datas }) => {
+  const dispatch = useDispatch();
+  const scrollIncrement = 300;
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        vertical: true,
-        verticalSwiping: true,
-        slidesToShow: 1.5,
-        slidesToScroll: 1,
-    }
+  const handleScroll = event => { 
+    const scrollPosition = event.currentTarget.scrollTop;
+    const increments = Math.floor(scrollPosition / scrollIncrement);
+    dispatch({ type : "CHANGE_IMAGE", payload: increments });
+  }
 
-    return (
-        <>
-        <div className="vertical-slider-container">
-            <Slider {...settings}>
-                {datas.map((cover, index) => (
-                <div key={index}>
-                    <img src={cover.cover} alt={cover.title} />
-                </div>
-                ))}
-            </Slider>
-        </div>
-        </>
-    )
+  return (
+      <div className="slider-list" onScroll={handleScroll}>
+        {datas.map((item, index) => (
+          <figure
+            key={index}
+            className='slider-list__image'
+            >
+              <img className="image-vertical-slider" src={item.cover} alt={item.title} />
+          </figure>
+        ))}
+      </div>
+  );
 }
 
 export default VerticalSlider;

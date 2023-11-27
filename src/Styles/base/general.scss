@@ -1,12 +1,33 @@
-body {
+* {
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+h1, h2, p {
   margin: 0;
+}
+
+body {
   font-family: $text-font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
-  background-color: $light-blue-color;
+  margin: 0 0 0 30px;
+}
+
+h1, h2, a {
+  font-family: $title-font-family;
+}
+
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 96px;
+}
+p {
+  font-size: 24px;
 }
 
 a {
+  font-size: 24px;
   text-decoration: none;
 }
