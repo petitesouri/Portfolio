@@ -1,7 +1,38 @@
+// animation slider vertical
 @keyframes slideImage {
     0% {
         transform: translateX(0);    }
     100% {
         transform: translateX(-550%);
     }
+}
+// animation défilement horizontal
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%); 
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+// animation section parcours
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

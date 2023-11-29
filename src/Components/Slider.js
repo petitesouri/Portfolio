@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux"; 
 
-const VerticalSlider = ({ datas }) => {
+const VerticalSlider = ({ datasProject }) => {
   const dispatch = useDispatch();
-  const scrollIncrement = 300;
+  const scrollIncrement = 350;
 
   const handleScroll = event => { 
     const scrollPosition = event.currentTarget.scrollTop;
@@ -12,7 +12,7 @@ const VerticalSlider = ({ datas }) => {
 
   return (
       <div className="slider-list" onScroll={handleScroll}>
-        {datas.map((item, index) => (
+        {datasProject.map((item, index) => (
           <figure
             key={index}
             className='slider-list__image'

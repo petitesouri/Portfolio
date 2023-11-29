@@ -1,8 +1,9 @@
 * {
-  max-width: 1440px;
+  // max-width: 1440px;
   box-sizing: border-box;
+  margin: auto;
 }
-h1, h2, p {
+body, h1, h2, h3, p {
   margin: 0;
 }
 
@@ -10,11 +11,13 @@ body {
   font-family: $text-font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 0 30px;
 }
 
 h1, h2, a {
   font-family: $title-font-family;
+}
+h3, blockquote {
+  font-family: $subtitle-font-family;
 }
 
 h1 {
@@ -23,10 +26,12 @@ h1 {
 h2 {
   font-size: 96px;
 }
-p {
+blockquote {
+  font-size: 48px;  
+}
+h3, p {
   font-size: 24px;
 }
-
 a {
   font-size: 24px;
   text-decoration: none;

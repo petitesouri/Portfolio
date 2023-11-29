@@ -1,26 +1,76 @@
-[
-    {
-        "id": "p1a2023",
-        "title": "CRÉER",
-        "cover": "/images/Portfolio.png",
-        "description": "Mon dernier projet. J'ai pu laisser s'exprimer ma créativité."
-    },
-    {
-        "id": "p2a2023",
-        "title": "INTÉGRER",
-        "cover": "/images/Argent Bank.png",
-        "description": "Au coeur de cette intégration: la gestion des états avec REDUX, sans oublier la sécurité of course!"
-    },
-    {
-        "id": "p3a2023",
-        "title": "DÉVELOPPER",
-        "cover": "/images/Kasa.png",
-        "description": "Comment se servir de ce  que l'on a déjà créer? Il n'y a pas de petites économies d'énergie."
-    },
-    {
-        "id": "p4a2023",
-        "title": "OPTIMISER",
-        "cover": "/images/Sophie Bluel.png",
-        "description": "Mes premiers pas en Javascript, ça méritait d'être en première page."
-    }
-]
+{
+    "projects": [
+        {
+            "id": "p1a2023",
+            "title": "CRÉER",
+            "cover": "/images/projects/Portfolio.png",
+            "description": "Mon dernier projet. J'ai pu laisser s'exprimer ma créativité."
+        },
+        {
+            "id": "p2a2023",
+            "title": "INTÉGRER",
+            "cover": "/images/projects/Argent Bank.png",
+            "description": "Au coeur de cette intégration: la gestion des états avec REDUX, sans oublier la sécurité of course!"
+        },
+        {
+            "id": "p3a2023",
+            "title": "DÉVELOPPER",
+            "cover": "/images/projects/Kasa.png",
+            "description": "Comment se servir de ce  que l'on a déjà créer? Il n'y a pas de petites économies d'énergie."
+        },
+        {
+            "id": "p4a2023",
+            "title": "OPTIMISER",
+            "cover": "/images/projects/Sophie Bluel.png",
+            "description": "Mes premiers pas en Javascript, ça méritait d'être en première page."
+        }
+    ],
+    "skills": [
+        {
+            "title":"Figma",
+            "src": "/images/skills/Figma.png"
+        },
+        {
+            "title":"GitHub",
+            "src": "/images/skills/GITHUB.png"
+        },
+        {
+            "title":"JavaScript",
+            "src": "/images/skills/javascript.png"
+        },
+        {
+            "title":"React",
+            "src": "/images/skills/REACT.png"
+        },
+        {
+            "title":"Redux",
+            "src": "/images/skills/Redux.png"
+        },
+        {
+            "title":"SASS",
+            "src": "/images/skills/SASS.png"
+        },
+        {
+            "title":"WordPress",
+            "src": "/images/skills/WORDPRESS.png"
+        }
+    ],
+    "experiences": [
+        {
+            "période": "2018 - 2020",
+            "poste": "Développeuse front-end 1"
+        },
+        {
+            "période": "2020 - 2022",
+            "poste": "Développeuse front-end 2 "
+        },
+        {
+            "période": "2024 - 2028",
+            "poste": "Développeuse front-end 3 "
+        },
+        {
+            "période": "2028 - 2030",
+            "poste": "Développeuse front-end 4 "
+        }
+    ]
+}

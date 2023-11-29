@@ -1,7 +1,8 @@
-import { CHANGE_IMAGE } from "../actions/datas.action";
+import { CHANGE_IMAGE, GET_EXPERIENCES } from "../actions/datas.action";
 
 const initialState = {
     image: 0,
+    experiences: [],
 }
 
 const postReducer = (state = initialState, action) => {
@@ -9,6 +10,11 @@ const postReducer = (state = initialState, action) => {
         case CHANGE_IMAGE:
             return {
                 image: action.payload,
+            };
+        case GET_EXPERIENCES:
+            return {
+                ...state,
+                experiences: action.payload,
             };
         default:
             return state;
