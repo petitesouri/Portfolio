@@ -6,3 +6,19 @@ main {
     padding: 25px 138px;
     gap: 5px;
 }
+.landing-page {
+    position: relative;
+}
+.landing-page::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-color:$sand-color;
+    transition: width 0.3s ease; 
+}
+.landing-page:hover::after {
+    width: 40px;
+}

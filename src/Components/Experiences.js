@@ -11,8 +11,9 @@ const Experiences = () => {
   },[dispatch])
 
   const experiences = useSelector(state => state.dataReducer.experiences)
-  const experiencesBeforeLine = experiences.slice(0,25).filter((_,index) => index % 2 === 1 )
-  const experiencesAfterLine = experiences.slice(0,25).filter((_,index) => index % 2 === 0 )
+  const experiencesBeforeLine = experiences ? experiences.slice(0, 25).filter((_, index) => index % 2 === 1) : [];
+  const experiencesAfterLine = experiences ? experiences.slice(0, 25).filter((_, index) => index % 2 === 0) : [];
+  
 
   return (
     <article className="section-parcours__experience" >

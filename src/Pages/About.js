@@ -4,9 +4,15 @@ import LinkedIn from "../assets/social Networks/linkedin.png"
 import Instagram from "../assets/social Networks/instagram.png"
 import Heart from "../assets/heart.png"
 import Experiences from "../Components/Experiences"
+import Header from '../Components/Header'
 
 const About = () => {
     return (
+        <>
+        <Header 
+            title="Virginie RUDOWSKI" 
+            text="dipie89@hotmail.fr"
+        />
         <main className='about-theme'>      
             <section className="section-hero">
                 <figure className="section-hero__picture">
@@ -59,6 +65,7 @@ const About = () => {
                 < Experiences />                
             </section>    
         </main>
+        </>
     )
 }
 

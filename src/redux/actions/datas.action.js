@@ -1,12 +1,27 @@
-export const CHANGE_IMAGE = 'CHANGE_IMAGE'
 export const GET_EXPERIENCES = 'GET_EXPERIENCES'
+export const SET_SELECTED_IMAGE = 'SET_SELECTED_IMAGE'
+export const CHANGE_IMAGE_BY_DOT = "CHANGE_IMAGE_BY_DOT";
+export const CHANGE_IMAGE_BY_SCROLL = "CHANGE_IMAGE_BY_SCROLL";
 
-export const changeImage = (dispatch) => {
-    return {
-        type: CHANGE_IMAGE,
-        image: dispatch.payload,
-    }
+export const setSelectedImage = (indexOrIncrements) => {
+  if (Number.isInteger(indexOrIncrements)) {
+    return changeImageByDot(indexOrIncrements);
+  } else {
+    return changeImageByScroll(indexOrIncrements);
+  }
 }
+
+export const changeImageByDot = (index) => {
+  return { 
+    type: CHANGE_IMAGE_BY_DOT, 
+    payload: index };
+};
+
+export const changeImageByScroll = (increments) => {
+  return { 
+    type: CHANGE_IMAGE_BY_SCROLL, 
+    payload: increments };
+};
 
 export const getExperiences = () => {
     return async (dispatch) => {

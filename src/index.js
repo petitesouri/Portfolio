@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
@@ -8,7 +8,6 @@ import rootReducer from "./redux/reducers/index";
 import Landing from './Pages/Landing'
 import About from './Pages/About'
 import Error from './Pages/Error'
-import Header from './Components/Header'
 
 import '../src/Styles/index.scss';
 
@@ -41,10 +40,10 @@ const App = () => {
   return (
     <React.StrictMode>  
     <Provider store={store}>  
-     <BrowserRouter>  
-       <Header />          
+     <BrowserRouter>            
        <Routes>          
            <Route path="/" element={ <Landing datasProject={ datasProject } datasSkills={ datasSkills }/>} />
+           
            <Route path="/About" element={ <About />} />
           <Route path='*' element={ <Error />} />
        </Routes> 

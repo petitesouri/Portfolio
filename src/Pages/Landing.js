@@ -1,26 +1,41 @@
 import React from 'react';
 import VerticalSlider from '../Components/Slider';
-import { useSelector } from "react-redux"
+import { useRef } from "react";
+import { useSelector, useDispatch } from "react-redux"
+import { setSelectedImage } from '../redux/actions/datas.action';
 import ArrowSand from '../assets/arrow-sand.png'
+import Header from '../Components/Header'
 
 const Landing = ({ datasProject, datasSkills }) => { 
-  const selectedImage = useSelector(state => state.dataReducer.image);
+  
+  const dispatch = useDispatch()
+  const sliderRef = useRef()
+  const selectedImage = useSelector(state => state.dataReducer.index);
+
   const text = (
-    datasProject.map((item, index) => {
+    datasProject.map((item, index) => { 
       if (selectedImage === index) { 
         return (             
         <div key={item.id}>
           <h2>{item.title}</h2>
           <p>{item.description}</p>
         </div>                
-      )}
+      )} else {
+        return null
+      }
     })
   )
-  const handleClickDots = (event) => {
-    console.log(event.target)
+
+  const handleClickDots = (index) => {
+    dispatch(setSelectedImage(index));
   }
 
   return (
+    <div className='landing-page'>
+    <Header 
+      title="Virginie RUDOWSKI" 
+      text="A propos"
+    />
     <main className='main-theme'>
       <div className='section-left'>
         <section className="section-text">
@@ -36,21 +51,23 @@ const Landing = ({ datasProject, datasSkills }) => {
               <img key={index} src={item.src} alt={item.title} />
             )) }
           </div>
+          
         </section>
       </div>
       <section className="section-slider">
-        <VerticalSlider id='showScroll' datasProject={datasProject}/>
+        <VerticalSlider id='showScroll' sliderRef={sliderRef} datasProject={datasProject}/>
       </section>
       <section className='dots'>
           {datasProject.map((item, index) => (            
               <div 
                 key={item.id} 
                 className={selectedImage === index ? 'dots_dot selected' : 'dots_dot'}
-                onClick={handleClickDots}>
+                onClick={() => handleClickDots(index)}>
               </div>           
           ))}
       </section>
     </main>
+    </div>
   );
 }
 

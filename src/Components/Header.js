@@ -1,20 +1,33 @@
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import { toggleAboutLink } from "../redux/actions/styles.action"
 
-// Faire version page About
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
-            <nav>            
+            <nav>
                 <Link to="/">
-                    <h1>Virginie RUDOWSKI</h1>
+                    <h1>{props.title}</h1>
                 </Link>
-                <Link to="/About">
-                    A Propos
-                </Link> 
-            </nav>           
+                {props.showAboutLink && (
+                    <Link to="/About">{props.text}</Link>
+                )}
+            </nav>
         </header>
-    )
+    );
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        showAboutLink: state.stylesReducer.showAboutLink,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        toggleAboutLink: () => dispatch(toggleAboutLink()),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
