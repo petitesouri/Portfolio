@@ -19,14 +19,15 @@
 // }
 // .section-career__experience-container.afterLine{
 //     p {
-//         opacity: 0;
+//         // opacity: 0;
 //         animation: appearRight 450ms ease-out forwards; 
 //     }
 // }  
 .line {
-    width: 2px;
-    height: 500px;
-    background-color: red;
-    opacity: 0;
-    animation: fall 4s ease-out forwards;
+    width: 10px;
+    height: 500px;    
+    background-color: white;
+    border-radius: 5px;
+    // opacity: 0;
+    // animation: fall 4s ease-out forwards 1s;
 }
