@@ -1,12 +1,6 @@
 {
     "projects": [
         {
-            "id": "p1a2023",
-            "title": "CRÉER",
-            "cover": "/images/projects/Portfolio.png",
-            "description": "Mon dernier projet. J'ai pu laisser s'exprimer ma créativité."
-        },
-        {
             "id": "p2a2023",
             "title": "INTÉGRER",
             "cover": "/images/projects/Argent Bank.png",
@@ -23,6 +17,12 @@
             "title": "OPTIMISER",
             "cover": "/images/projects/Sophie Bluel.png",
             "description": "Mes premiers pas en Javascript, ça méritait d'être en première page."
+        },
+        {
+            "id": "p1a2023",
+            "title": "CRÉER",
+            "cover": "/images/projects/Portfolio.png",
+            "description": "Mon dernier projet. J'ai pu laisser s'exprimer ma créativité."
         }
     ],
     "skills": [
@@ -57,20 +57,20 @@
     ],
     "experiences": [
         {
-            "période": "2018 - 2020",
-            "poste": "Développeuse front-end 1"
+            "periode": "1996 - 2016",
+            "poste": "ma vie d'avant"
         },
         {
-            "période": "2020 - 2022",
-            "poste": "Développeuse front-end 2 "
+            "periode": "2006 - 2016 ",
+            "poste": "Mes premières programmations sur commandes numériques "
         },
         {
-            "période": "2024 - 2028",
-            "poste": "Développeuse front-end 3 "
+            "periode": "2016 - 2018",
+            "poste": "Mes premières CAO et FAO"
         },
         {
-            "période": "2028 - 2030",
-            "poste": "Développeuse front-end 4 "
+            "periode": "2018 - demain et plus encore",
+            "poste": "Découverte du Worl Wide Web  "
         }
     ]
 }

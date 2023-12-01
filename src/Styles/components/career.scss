@@ -1,0 +1,32 @@
+.section-career__experience {
+    display: flex;   
+
+}
+.section-career__experience-container {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    .itemXP {
+        width: 300px;        
+        p {
+            font-size: 20px;
+        }
+    } 
+}
+// .section-career__experience-container.beforeLine{
+    
+// }
+// .section-career__experience-container.afterLine{
+//     p {
+//         opacity: 0;
+//         animation: appearRight 450ms ease-out forwards; 
+//     }
+// }  
+.line {
+    width: 2px;
+    height: 500px;
+    background-color: red;
+    opacity: 0;
+    animation: fall 4s ease-out forwards;
+}

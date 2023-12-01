@@ -5,5 +5,44 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        a {
+            margin: 0;
+        }
+        a:hover {
+            transform: scale(1.02);
+        }
+        .header-link {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
     }
 }
+.header.landing {
+    background-color: $light-blue-color;
+}
+.header.about {
+    background-color: $dark-blue-color;
+    .header-link {
+        background-color: $yellow-color;
+        border-radius: 25px;
+        padding: 5px 10px;
+    }
+}
+
+.interchange-letters {
+    display: flex;
+  }
+  
+  .letter {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .letter:hover {
+    transform: rotate(180deg);
+  }
+  

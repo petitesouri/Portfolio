@@ -2,15 +2,20 @@
 
 .section-left {
     width: 50%;
-    height: 85vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 20px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    padding-bottom: 30px;
 }
 .section-text {
-    width: 450px;
-    padding-top: 248px;
+    width: 500px;
+    padding-top: 180px;
+}
+.section-text-link {
+    width: 500px;
+    display: flex;
 }
 .section-skills {
     width: 253px;
@@ -18,10 +23,12 @@
     background-color: $dark-blue-color;
     border-radius: 15px;
     border: 20px solid white;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     &__logos {
         width: 250px;
-        height: 150px; 
+        height: 100px; 
         display: flex;
         align-items: center;
         // justify-content: center;
@@ -77,30 +84,34 @@
 
 // About Page
 .section-hero {
-    display: flex;
-    padding-top: 50px;
+    display: grid;
+    padding: 80px 0;
+    grid-template-columns: 1fr 1fr;
     &__picture {
-        width: 800px;
-        height: 800px;
+        width: 600px;
+        height: 600px;
         background-color: $yellow-color;
-        border-radius: 100%;
+        border-radius: 50%;
         position: relative;
-        left: -200px;
-        display: flex;
-        overflow: hidden;
+        left: -230px;
         box-shadow: 20px -11px 20px 3px rgba(0, 0, 0, 0.25);
         img {
-            width: 660px;
-            border-radius: 100%;
+            width: 80%;
+            border-radius: 50%;
             box-shadow: 20px -11px 20px 3px rgba(0, 0, 0, 0.25);
             filter: sepia(0.1) opacity(0.8);
+            position: relative;
+            left: 55px;
+            top: 50px;
         }
     }
     &__text {
         width: 516px;
         display: flex;
         flex-direction: column;
-        gap: 162px;
+        justify-content: center;
+        gap: 50px;
+        
     }
     &__social-icons {
         display: flex;
@@ -117,7 +128,10 @@
     &__article {
        font-size: 20px; 
        display: flex;
-       gap: 300px;
+       justify-content: space-between;
+       p {
+        width: 60%;
+       }
     }
 }
 
@@ -127,6 +141,7 @@
     position: relative;
     &__heart {
         width: 70px;
+        animation: heartbeat 1s infinite;
     }
 }
 .section-like__image-container::before,
@@ -139,11 +154,11 @@
     background-color: $sand-color;
 }
 .section-like__image-container::before {
-    left: -550px;
+    left: 0;
     transform: translateY(35px);
   } 
 .section-like__image-container::after {
-    right: -550px;
+    right: 0;
     transform: translateY(-35px);
 }
 
@@ -159,23 +174,13 @@
     animation: scrollLeft 10s linear infinite;    
 }
 
-// Section parcours
+// Section career
 
-.section-parcours {
+.section-career {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     overflow: hidden;
     margin-bottom: 100px;
-    &__experience {
-        display: flex;       
-        .line {
-            width: 2px;
-            height: 500px;
-            background-color: red;
-            opacity: 0;
-            animation: fall 4s ease-out forwards;
-        }
-        p {
-            opacity: 0;
-            animation: appear 450ms ease-out forwards; 
-        }
-    }
+    padding: 60px 128px;
 }

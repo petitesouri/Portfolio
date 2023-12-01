@@ -1,10 +1,11 @@
-* {
+*, body {
   max-width: 1440px;
   box-sizing: border-box;
   margin: 0 auto;
 }
-body, h1, h2, h3, p {
+h1, h2, h3, p, .section-text, .section-text-link {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -27,10 +28,19 @@ h2 {
   font-size: 96px;
 }
 blockquote {
-  font-size: 48px;  
+  font-size: 36px;  
+  text-align: center;
+  quotes: "“" "”" "‘" "’";
+}
+blockquote:before {
+  content: open-quote;
+}
+blockquote:after {
+  content: close-quote;
 }
 h3, p {
   font-size: 24px;
+  font-weight: 100;
 }
 a {
   font-size: 24px;

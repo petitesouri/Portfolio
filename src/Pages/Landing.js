@@ -32,7 +32,8 @@ const Landing = ({ datasProject, datasSkills }) => {
 
   return (
     <div className='landing-page'>
-    <Header 
+    <Header
+      path="landing" 
       title="Virginie RUDOWSKI" 
       text="A propos"
     />
@@ -41,7 +42,7 @@ const Landing = ({ datasProject, datasSkills }) => {
         <section className="section-text">
           { text }
         </section>
-        <section>
+        <section className="section-text-link">
           <p>Découvrez mes projets </p>
           <img src={ArrowSand} alt="arrow-sand" />
         </section>

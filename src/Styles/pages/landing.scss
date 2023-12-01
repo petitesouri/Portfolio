@@ -1,14 +1,15 @@
 main {
     // min-height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     // justify-content: space-between;
     padding: 25px 138px;
     gap: 5px;
 }
-.landing-page {
-    position: relative;
-}
+// .landing-page {
+//     position: relative;
+// }
 .landing-page::after {
     content: "";
     position: absolute;
