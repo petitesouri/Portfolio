@@ -3,15 +3,17 @@ import VerticalSlider from '../Components/Slider';
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { setSelectedImage } from '../redux/actions/datas.action';
+import { openModal } from '../redux/actions/styles.action';
 import ArrowSand from '../assets/arrow-sand.png'
 import Header from '../Components/Header'
+import Modal from '../Components/Modal'
 
-const Landing = ({ datasProject, datasSkills }) => { 
-  
+const Landing = ({ datasProject, datasSkills }) => {   
   const dispatch = useDispatch()
   const sliderRef = useRef()
+  const isModalOpen = useSelector(state => state.stylesReducer.isModalOpen)
   const selectedImage = useSelector(state => state.dataReducer.index);
-
+  
   const text = (
     datasProject.map((item, index) => { 
       if (selectedImage === index) { 
@@ -30,6 +32,10 @@ const Landing = ({ datasProject, datasSkills }) => {
     dispatch(setSelectedImage(index));
   }
 
+  const handleOpenModal = () => {
+    dispatch(openModal(true));
+  };
+
   return (
     <div className='landing-page'>
     <Header
@@ -44,7 +50,13 @@ const Landing = ({ datasProject, datasSkills }) => {
         </section>
         <section className="section-text-link">
           <p>Découvrez mes projets </p>
-          <img src={ArrowSand} alt="arrow-sand" />
+          <img src={ArrowSand} alt="arrow-sand" onClick={handleOpenModal} />
+          <Modal 
+            isOpen={isModalOpen} 
+            onClose={() => dispatch(openModal(false))}
+            selectedImage={selectedImage}
+            datasProject={datasProject} 
+          />
         </section>
         <section className='section-skills'>
           <div className='section-skills__logos'>

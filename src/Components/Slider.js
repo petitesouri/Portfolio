@@ -9,6 +9,7 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
   const scrollIncrementPercentage = 0.8;
   const selectedIndex = useSelector((state) => state.dataReducer.index);
 
+  // controle du nombre de dispatch au scroll de slider
   const debouncedScrollHandler = debounce(() => {
     if (sliderRef.current && scrollIncrementRef.current) {
       const scrollPosition = sliderRef.current.scrollTop;
@@ -17,6 +18,7 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
     }
   }, 200);
 
+  // mesure de la première image
   useEffect(() => {
     if (sliderRef.current && sliderRef.current.firstChild) {
       const measureElementHeight = () => {
@@ -48,11 +50,12 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
   
   const handleScroll = () => { 
     if (sliderRef.current) {
-      const scrollPosition = sliderRef.current.scrollLeft;
+      const scrollPosition = sliderRef.current.scrollTop;
       const increments = Math.round(scrollPosition / scrollIncrementRef.current);
       debouncedScrollHandler(increments);
     }
   }
+  
 
   return (
       <ul ref={sliderRef} className="slider-list" onScroll={handleScroll}>

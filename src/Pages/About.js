@@ -5,6 +5,7 @@ import Instagram from "../assets/social Networks/instagram.png"
 import Heart from "../assets/heart.png"
 import Experiences from "../Components/Experiences"
 import Header from '../Components/Header'
+import Educations from "../Components/Education"
 
 const About = () => {
     return (
@@ -70,10 +71,13 @@ const About = () => {
             <section className="section-career">
                 <blockquote className="section-presentation__blockquote">
                     On vit dans une époque formidable. On peut tout apprendre, tout le temps.
-                    Et si je vous disais que des bouquins pour apprendre le chinois et l'italien, cela vous étonne?
+                    Et si je vous disais que j'ai des bouquins pour apprendre le chinois et l'italien, cela vous étonne?
                 </blockquote>
                 < Experiences />                
-            </section>    
+            </section> 
+            <section className="section-education">
+                <Educations/>
+            </section>   
         </main>
         </>
     )

@@ -186,5 +186,19 @@
     &__experience {
         width: 100%;
         height: 500px;
+        display: flex;
     }
 }
+
+// Section Education
+
+// .section-education {
+//     display: flex;
+//     &__article-img {
+//         img {
+//             width: 100px;
+//             height: 100px;
+//             object-fit: contain;
+//         }
+//     }
+// }

@@ -1,33 +1,23 @@
-.section-career__experience {
-    display: flex;   
-
-}
 .section-career__experience-container {
-    height: 100px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 120px;
     .itemXP {
         width: 300px;        
         p {
             font-size: 20px;
         }
     } 
+} 
+.section-career__experience-container.beforeLine{
+    padding-top: 160px;
+} 
+.section-career__experience-container.afterLine{
+    padding-top: 60px;
 }
-// .section-career__experience-container.beforeLine{
-    
-// }
-// .section-career__experience-container.afterLine{
-//     p {
-//         // opacity: 0;
-//         animation: appearRight 450ms ease-out forwards; 
-//     }
-// }  
 .line {
     width: 10px;
     height: 500px;    
     background-color: white;
     border-radius: 5px;
-    // opacity: 0;
-    // animation: fall 4s ease-out forwards 1s;
 }

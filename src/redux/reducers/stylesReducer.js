@@ -1,9 +1,10 @@
 import { TOGGLE_ABOUT_LINK } from "../actions/styles.action";
-import { SET_SECTION_VISIBILITY } from '../actions/styles.action';
+import { SET_SECTION_VISIBILITY, OPEN_MODAL } from '../actions/styles.action';
 
 const initialState = {
     showAboutLink: true,
     isSectionVisible: false,
+    isModalOpen: false,
 }
 
 const stylesReducer = (state = initialState, action) => {
@@ -17,6 +18,11 @@ const stylesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isSectionVisible: action.payload,
+            };
+        case OPEN_MODAL:
+            return {
+                ...state,
+                isModalOpen: action.payload,
             };
         default:
             return state;

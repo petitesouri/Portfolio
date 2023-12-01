@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getExperiences } from '../redux/actions/datas.action'
-import {  setSectionVisibility } from '../redux/actions/styles.action'
+import { setSectionVisibility } from '../redux/actions/styles.action'
 import { motion, useAnimation } from 'framer-motion'
 
 const Experiences = () => {    
@@ -41,9 +41,7 @@ const Experiences = () => {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lineControls, isSectionVisible]);
-
-  
+  }, [dispatch, lineControls, isSectionVisible]);
 
   return (
     <article className="section-career__experience" ref={containerRef}>
@@ -54,7 +52,7 @@ const Experiences = () => {
               className={`itemXP ${isSectionVisible ? 'visible' : ''}`} 
               initial={{ opacity: 0, x: -50 }}
               animate={{ x: isSectionVisible ? 0 : -50, opacity: isSectionVisible ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: index * 0.5 }}
+              transition={{ duration: 3, delay: index * 0.5 }}
               >
             <p>{experience.periode}</p>
             <p>{experience.poste}</p>
@@ -65,7 +63,7 @@ const Experiences = () => {
         className={`line ${isSectionVisible ? 'visible' : ''}`}
         animate={{ height: isSectionVisible ? '100%' : 0, opacity: isSectionVisible ? 1 : 0 }}
         initial={{ height: 0, opacity: 0 }}
-        transition={{ duration: 4, ease: 'easeInOut' }}
+        transition={{ duration: 2.5, ease: 'easeInOut' }}
       >
       </motion.div>
       <div className='section-career__experience-container afterLine'>
@@ -75,7 +73,7 @@ const Experiences = () => {
               className={`itemXP ${isSectionVisible ? 'visible' : ''}`}
               initial={{ opacity: 0, x: 50 }}
               animate={{ x: isSectionVisible ? 0 : 50, opacity: isSectionVisible ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: index * 0.5 }} 
+              transition={{ duration: 3, delay: index * 0.5 }} 
               >
             <p>{experience.periode}</p>
             <p>{experience.poste}</p>
