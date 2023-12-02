@@ -50,20 +50,18 @@
     overflow: hidden;
 }
 .slider-list { 
-    height: 85vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;    
     overflow: scroll;
-    transform: rotate3d(2, -2, 0.4, 34deg);
-    // perspective: 200px;
-    // transform: rotateX(22deg) rotateZ(9deg); 
-    // box-shadow: 20px 0px 10px 0px rgba(0, 0, 0, 0.25);   
+    transform: rotate3d(2, -2, 0.4, 34deg);   
+    padding-top: 40px;
+    padding-bottom: 40px;
    &__image {
         width: 400px;
         margin: 0;
-        padding-top: 75px;
-        // transform: rotateY(349deg) ; 
-        // box-shadow: 20px 10px 20px 0px rgba(0, 0, 0, 0.25);  
+        padding-top: 60px;
+        padding-bottom: 60px; 
         img { 
             width: 90%;
             height: 400px;

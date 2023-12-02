@@ -9,7 +9,7 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
   const scrollIncrementPercentage = 0.8;
   const selectedIndex = useSelector((state) => state.dataReducer.index);
 
-  // controle du nombre de dispatch au scroll de slider
+  // controle du nombre de dispatch au scroll du slider
   const debouncedScrollHandler = debounce(() => {
     if (sliderRef.current && scrollIncrementRef.current) {
       const scrollPosition = sliderRef.current.scrollTop;
@@ -24,7 +24,8 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
       const measureElementHeight = () => {
         const firstElement = sliderRef.current.firstChild;
         if (firstElement) {
-          const elementHeight = firstElement.clientHeight;
+          const boundingBox = firstElement.getBoundingClientRect();
+          const elementHeight = boundingBox.bottom - boundingBox.top;
           scrollIncrementRef.current = elementHeight * scrollIncrementPercentage;
         }
       };
@@ -56,7 +57,6 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
     }
   }
   
-
   return (
       <ul ref={sliderRef} className="slider-list" onScroll={handleScroll}>
         {datasProject.map((item, index) => (

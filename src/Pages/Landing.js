@@ -50,13 +50,10 @@ const Landing = ({ datasProject, datasSkills }) => {
         </section>
         <section className="section-text-link">
           <p>Découvrez mes projets </p>
+
           <img src={ArrowSand} alt="arrow-sand" onClick={handleOpenModal} />
-          <Modal 
-            isOpen={isModalOpen} 
-            onClose={() => dispatch(openModal(false))}
-            selectedImage={selectedImage}
-            datasProject={datasProject} 
-          />
+
+
         </section>
         <section className='section-skills'>
           <div className='section-skills__logos'>
@@ -68,7 +65,19 @@ const Landing = ({ datasProject, datasSkills }) => {
         </section>
       </div>
       <section className="section-slider">
-        <VerticalSlider id='showScroll' sliderRef={sliderRef} datasProject={datasProject}/>
+
+        <VerticalSlider 
+          id='showScroll' 
+          sliderRef={sliderRef} 
+          datasProject={datasProject}
+        />
+        <Modal 
+          isOpen={isModalOpen} 
+          onClose={() => dispatch(openModal(false))}
+          selectedImage={selectedImage}
+          datasProject={datasProject} 
+        />
+
       </section>
       <section className='dots'>
           {datasProject.map((item, index) => (            

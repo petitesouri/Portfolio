@@ -75,9 +75,9 @@ const About = () => {
                 </blockquote>
                 < Experiences />                
             </section> 
-            <section className="section-education">
+            {/* <section className="section-education">
                 <Educations/>
-            </section>   
+            </section>    */}
         </main>
         </>
     )
