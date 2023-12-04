@@ -12,25 +12,44 @@ const Landing = ({ datasProject, datasSkills }) => {
   const dispatch = useDispatch()
   const sliderRef = useRef()
   const isModalOpen = useSelector(state => state.stylesReducer.isModalOpen)
+  // const isResponsive = useSelector(state => state.stylesReducer.isResponsiveMode)
   const selectedImage = useSelector(state => state.dataReducer.index);
-  
+
   const text = (
     datasProject.map((item, index) => { 
-      if (selectedImage === index) { 
         return (             
-        <div key={item.id}>
+        <div key={item.id} className={`text-item ${selectedImage === index ? 'visible' : 'hidden'}`}>
           <h2>{item.title}</h2>
           <p>{item.description}</p>
         </div>                
-      )} else {
-        return null
-      }
+      )
     })
   )
 
   const handleClickDots = (index) => {
     dispatch(setSelectedImage(index));
-  }
+  
+    if (sliderRef.current) {
+      const selectedImageElement = sliderRef.current.children[index];
+      const scrollOptions = { behavior: "smooth" };
+  
+      if (window.innerWidth > 1024) {
+        // Mode desktop : Défilement vertical
+        const verticalOffset =
+          selectedImageElement.offsetTop -
+          sliderRef.current.clientHeight / 2 +
+          selectedImageElement.clientHeight / 2;
+        sliderRef.current.scrollTo({ top: verticalOffset, ...scrollOptions });
+      } else {
+        // Mode tablette : Défilement horizontal
+        const horizontalOffset =
+          selectedImageElement.offsetLeft -
+          sliderRef.current.clientWidth / 2 +
+          selectedImageElement.clientWidth / 2;
+        sliderRef.current.scrollTo({ left: horizontalOffset, ...scrollOptions });
+      }
+    }
+  };
 
   const handleOpenModal = () => {
     dispatch(openModal(true));
@@ -50,22 +69,17 @@ const Landing = ({ datasProject, datasSkills }) => {
         </section>
         <section className="section-text-link">
           <p>Découvrez mes projets </p>
-
           <img src={ArrowSand} alt="arrow-sand" onClick={handleOpenModal} />
-
-
         </section>
         <section className='section-skills'>
           <div className='section-skills__logos'>
             { datasSkills.map((item, index) => (
               <img key={index} src={item.src} alt={item.title} />
             )) }
-          </div>
-          
+          </div>          
         </section>
       </div>
       <section className="section-slider">
-
         <VerticalSlider 
           id='showScroll' 
           sliderRef={sliderRef} 
@@ -83,7 +97,7 @@ const Landing = ({ datasProject, datasSkills }) => {
           {datasProject.map((item, index) => (            
               <div 
                 key={item.id} 
-                className={selectedImage === index ? 'dots_dot selected' : 'dots_dot'}
+                className={index === selectedImage ? 'dots_dot selected' : 'dots_dot'}
                 onClick={() => handleClickDots(index)}>
               </div>           
           ))}

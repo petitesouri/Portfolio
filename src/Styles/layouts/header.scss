@@ -1,6 +1,6 @@
 header {
     height: 100px;
-    padding: 25px 138px;
+    padding: 1.56rem 8.625rem;
     nav {
         display: flex;
         justify-content: space-between;
@@ -16,6 +16,9 @@ header {
             justify-content: flex-end;
             margin: 0;
         }
+    }
+    @include mobile-and-tablet {
+        padding: 1.56rem 1.875rem;
     }
 }
 .header.landing {
@@ -40,6 +43,13 @@ header {
     margin: 0 4px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    @include tablet {
+        font-size: 1rem;
+    }
+    @include mobile {
+        font-size: 1rem;
+        margin: 0;
+    }
   }
   
   .letter:hover {

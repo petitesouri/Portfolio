@@ -1,22 +1,15 @@
 @import "./utils/variables.scss";
-// @import "./utils/mixins.scss";
+@import "./utils/mixins.scss";
 @import "./utils/keyframes.scss";
 
 @import "./base/general.scss";
-// @import "./base/typography.scss";
-
-@import "./themes/light-theme.scss";
 
 @import "./components/slider.scss";
 @import "./components/career.scss";
 @import "./components/modal.scss";
 
 @import "./layouts/header.scss";
-// @import "./layouts/footer.scss";
-// @import "./layouts/banner.scss";
 @import "./layouts/sections.scss";
 
 @import "./pages/landing.scss";
 @import "./pages/about.scss";
-// @import "./pages/logement.scss";
-// @import "./pages/erreur.scss";

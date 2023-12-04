@@ -15,3 +15,15 @@
         background-color: $yellow-color;
     }
 }
+
+@include mobile-and-tablet {
+    .dots {
+        height: auto;
+        flex-direction: row;
+        gap: 20px;
+        &_dot {
+            width: 30px;
+            height: 15px;
+        }
+    }
+}

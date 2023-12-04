@@ -1,0 +1,18 @@
+/* Responsive */
+@mixin mobile-and-tablet {
+  @media screen and (max-width: #{$mobil-max}), (min-width: #{$tablet-min}) and (max-width: #{$tablet-max}) {
+    @content;     
+  }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$mobil-max}) {
+      @content;     
+    }
+  }
+  
+@mixin tablet {
+  @media screen and (min-width: #{$tablet-min}) and (max-width: #{$tablet-max}) {
+    @content;     
+  }
+}

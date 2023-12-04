@@ -5,7 +5,7 @@ export const OPEN_MODAL = 'OPEN_MODAL'
 export const openModal = (isModalOpen) => ({
     type: OPEN_MODAL,
     payload: isModalOpen,
-  });
+});
 
 
 export const toggleAboutLink = () => {
@@ -17,4 +17,4 @@ export const toggleAboutLink = () => {
 export const setSectionVisibility = (isVisible) => ({
     type: SET_SECTION_VISIBILITY,
     payload: isVisible,
-  });
+});

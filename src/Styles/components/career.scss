@@ -21,3 +21,30 @@
     background-color: white;
     border-radius: 5px;
 }
+
+@include mobile {
+    .section-career {
+        &__experience {
+            .section-career__experience-container.beforeLine, 
+            .section-career__experience-container.afterLine {
+                position: absolute;
+                .itemXP {
+                    margin-bottom: 0.5rem;
+                    p {
+                        height: 2.5rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .section-career__experience-container.beforeLine {
+                padding-top: 5.5rem;
+            }
+            .section-career__experience-container.afterLine {
+                padding-top: 0;
+            }
+        }
+        .line {
+            display: none;
+        }
+    }
+}

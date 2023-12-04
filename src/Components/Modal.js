@@ -53,24 +53,16 @@ const Modal = ({ isOpen, onClose, selectedImage, datasProject }) => {
         ]}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        transformOrigin={{ x: 1, y: 0.5 }}
       >
-        {/* <img src={Chevron} alt="Chevron" className="prev-button" onClick={handlePrevProject}></img> */}
+        <div className="top-buttons">
+          <img src={Chevron} alt="Chevron" className="prev-button" onClick={handlePrevProject}></img>
+          <button onClick={onClose} className="close-button">X</button>
+        </div>        
         <img src={selectedItem.cover} alt={selectedItem.cover} />
         <p>{selectedItem.description}</p>
-        {/* <img src={Chevron} alt="Chevron" className="next-button" onClick={handleNextProject}></img> */}
-        <button onClick={onClose}>Fermer</button>
+        <img src={Chevron} alt="Chevron" className="next-button" onClick={handleNextProject}></img>
       </motion.div>
     </motion.div>
-    // <div className="modal-overlay" onClick={onClose}>
-    //   <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-    //     <img src={ Chevron } alt="Chevron" className="prev-button" onClick={handlePrevProject}></img>
-    //     <img src={selectedItem.cover} alt={selectedItem.cover} />
-    //     <p>{selectedItem.description}</p>
-    //     <img src={ Chevron } alt="Chevron" className="next-button" onClick={handleNextProject}></img>
-    //     <button onClick={onClose}>Fermer</button>
-    //   </div>
-    // </div>
   );
 }
 

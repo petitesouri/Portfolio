@@ -1,25 +1,37 @@
 main {
-    // min-height: 100vh;
+    background-color: $light-blue-color;
     width: 100%;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
-    padding: 25px 138px;
+    padding: 1.5625rem 8.625rem;
     gap: 5px;
 }
-// .landing-page {
-//     position: relative;
-// }
 .landing-page::after {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
-    width: 30px;
+    width: 1.875rem;
     height: 100%;
     background-color:$sand-color;
     transition: width 0.3s ease; 
 }
 .landing-page:hover::after {
-    width: 40px;
+    width: 2.5rem;
+}
+
+@include mobile-and-tablet {
+    main {
+        padding: 1.56rem 1.875rem;
+    }
+    .landing-page::after {
+        width: 0;
+    }
+    .landing-page:hover::after {
+        width: 0;
+    }
+    main {
+        flex-direction: column-reverse; 
+        gap: 25px;     
+    }  
 }
