@@ -1,14 +1,6 @@
 import { motion } from 'framer-motion';
-import { openModal, contactMode } from '../redux/actions/styles.action';
-import { useDispatch } from "react-redux"
 
-const InterchangeLetters = ({ text }) => {
-  const dispatch = useDispatch()   
-
-  const handleOpenModal = () => {
-      dispatch(openModal(true));
-      dispatch(contactMode(true));
-  };
+const InterchangeLetters = ({ text }) => {  
 
   const letters = text.split('');
 
@@ -20,7 +12,6 @@ const InterchangeLetters = ({ text }) => {
           className="letter"
           whileHover="swapped"
           whileTap="swapped"
-          onClick={handleOpenModal}
         >
           {letter}
         </motion.span>

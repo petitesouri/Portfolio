@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Modal = ({ isOpen, onClose, selectedImage, datasProject }) => {
   const dispatch = useDispatch();
   const contact = useSelector(state => state.stylesReducer.contactMode);
-  
+
   if (!isOpen) {
     return null;
   }
@@ -79,11 +79,11 @@ const Modal = ({ isOpen, onClose, selectedImage, datasProject }) => {
                   <button onClick={onClose} className="close-button">X</button>
                 </div>        
                 <img src={selectedItem.cover} alt={selectedItem.cover} />
-                <p>{selectedItem.description}</p>
+                <p>{selectedItem.feedback}</p>
+                <a href={selectedItem.link} target="_blank" rel="noopener noreferrer">{selectedItem.link}</a>
                 <img src={Chevron} alt="Chevron" className="next-button" onClick={handleNextProject}></img>
               </>
             )}
-
           </motion.div>
         </>
       )}

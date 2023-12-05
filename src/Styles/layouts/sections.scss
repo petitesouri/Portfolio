@@ -18,6 +18,19 @@
 .section-text-link {
     width: 31.25rem;
     display: flex;
+    &__arrows {
+        position: relative;
+        display: inline-block;
+        .arrow-yellow {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__arrows:hover .arrow-yellow {
+        display: block;
+    }
 }
 .section-skills {
     width: 15.8125rem;
@@ -227,6 +240,7 @@
     padding: 3.75rem 8rem;
     &__article {
        font-size: 20px; 
+       max-width: 80%;
        display: flex;
        justify-content: space-between;
        p {
@@ -323,6 +337,7 @@
     padding: 3.75rem 8rem;
     &__experience {
         width: 100%;
+        max-width: 80%;
         height: 31.25rem;
         display: flex;
     }

@@ -36,7 +36,7 @@ const About = () => {
                     <p>Je suis intégratrice web dans le Sud-Ouest de la France.
                         Vous avez un projet complètement fou? 
                         Vous vous sentez l'âme d'un artiste numérique,
-                        ou vous avez tout simplement une surcharge de travail ?
+                        ou vous avez tout simplement besoin d'un coup de main ?
                     </p>
                     <p>
                         Parlons en!

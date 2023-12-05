@@ -4,25 +4,33 @@
             "id": "p2a2023",
             "title": "INTÉGRER",
             "cover": "/images/projects/Argent Bank.webp",
-            "description": "Au coeur de cette intégration: la gestion des états avec REDUX, sans oublier la sécurité of course!"
+            "description": "Au coeur de cette intégration: la gestion des états avec REDUX, sans oublier la sécurité of course!",
+            "feedback": "Dans ce projet, toute la gestion des états locaux des composants est réalisée avec REDUX. Pour moi qui vient de la mécanique, c'est un vrai jeu d'enfant dont je ne me lasse pas. ",
+            "link":"https://github.com/petitesouri/PROJET-11.git"
         },
         {
             "id": "p3a2023",
             "title": "DÉVELOPPER",
             "cover": "/images/projects/Kasa.webp",
-            "description": "Comment se servir de ce  que l'on a déjà créer? Il n'y a pas de petites économies d'énergie."
+            "description": "Comment se servir de ce  que l'on a déjà créer? Grâce à React, bien sûr.",
+            "feedback": "On créé, on utilise, on réutilise, on réutilise encore sous une autre forme, ah ces composants react, 😊, un vrai gain de temps et d'énergie, c'est toujours bon pour la planète! ",
+            "link":"https://github.com/petitesouri/OC-PROJET-8.git"
         },
         {
             "id": "p4a2023",
             "title": "OPTIMISER",
             "cover": "/images/projects/Sophie Bluel.webp",
-            "description": "Mes premiers pas en Javascript, ça méritait d'être en première page."
+            "description": "La base: Javascript, boucles et conditions.",
+            "feedback": "Apprendre à travailler avec des designers, ça ne s'improvise pas. Et connaitre les bases de javascript pour obtenir un site dynamique non plus. What else {}?",
+            "link":"https://github.com/petitesouri/OC-Projet-6.git"
         },
         {
             "id": "p1a2023",
             "title": "CRÉER",
             "cover": "/images/projects/Portfolio.webp",
-            "description": "Mon dernier projet. J'ai pu laisser s'exprimer ma créativité."
+            "description": "A vous de trouver les animations cachées.",
+            "feedback": "Je voulais un portfolio qui me représente: dynamique, avec une touche de curiosité. Par ci par là, il y a de petites animations subtiles à découvrir. Je me suis vraiment beaucoup amusée à réaliser ce site.",
+            "link":"https://github.com/petitesouri/Portfolio.git"
         }
     ],
     "skills": [
@@ -57,20 +65,20 @@
     ],
     "experiences": [
         {
-            "periode": "1996 - 2016",
-            "poste": "ma vie d'avant"
+            "periode": "1994",
+            "poste": "Bac A3 ( lettres-arts-philosophie) - Lycée Chopin Nancy"
         },
         {
-            "periode": "2006 - 2016 ",
-            "poste": "Mes premières programmations sur commandes numériques "
+            "periode": "1997 - 2001 ",
+            "poste": "Certificats Techniques Militaires: maintenance et logistique "
         },
         {
-            "periode": "2016 - 2018",
-            "poste": "Mes premières CAO et FAO"
+            "periode": "2016",
+            "poste": "DUT Génie Mécanique et Productique - IUT Paul Sabatier Toulouse"
         },
         {
-            "periode": "2018 - demain et plus encore",
-            "poste": "Découverte du Worl Wide Web  "
+            "periode": "2023",
+            "poste": " RNCP Intégrateur Web - OpenClassrooms "
         }
     ]
 }

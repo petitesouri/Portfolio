@@ -1,19 +1,20 @@
 import React from 'react';
 import VerticalSlider from '../Components/Slider';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { setSelectedImage } from '../redux/actions/datas.action';
 import { openModal, contactMode } from '../redux/actions/styles.action';
 import ArrowSand from '../assets/arrow-sand.webp'
+import ArrowYellow from '../assets/arrow-yellow.webp'
 import Header from '../Components/Header'
 import Modal from '../Components/Modal'
 
 const Landing = ({ datasProject, datasSkills }) => {   
   const dispatch = useDispatch()
-  const sliderRef = useRef()
-
+  const sliderRef = useRef() 
   const isModalOpen = useSelector(state => state.stylesReducer.isModalOpen)
   const selectedImage = useSelector(state => state.dataReducer.index);
+  const [isHovered, setIsHovered] = useState(false);
  
   const text = (
     datasProject.map((item, index) => { 
@@ -70,7 +71,25 @@ const Landing = ({ datasProject, datasSkills }) => {
           </section>
           <section className="section-text-link">
             <p>Découvrez mes projets </p>
-            <img src={ArrowSand} alt="arrow-sand" onClick={handleOpenModal} />
+            <div
+              className='section-text-link__arrows'
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <img
+                className='arrow-sand'
+                src={ArrowSand}
+                alt="arrow-sand"
+                onClick={handleOpenModal}
+              />
+              {isHovered && 
+                <img 
+                  className="arrow-yellow" 
+                  src={ArrowYellow} 
+                  alt="arrow-yellow"
+                  onClick={handleOpenModal} 
+              />}
+            </div>
           </section>
           <section className='section-skills'>
             <div className='section-skills__logos'>
