@@ -1,11 +1,11 @@
-import Selfie from "../assets/Selfie.jpg"
-import Facebook from "../assets/social Networks/facebook.png"
-import LinkedIn from "../assets/social Networks/linkedin.png"
-import Instagram from "../assets/social Networks/instagram.png"
-import Heart from "../assets/heart.png"
+import Selfie from "../assets/Selfie.webp"
+import Facebook from "../assets/social Networks/facebook.webp"
+import LinkedIn from "../assets/social Networks/linkedin.webp"
+import Instagram from "../assets/social Networks/instagram.webp"
+import Heart from "../assets/heart.webp"
 import Experiences from "../Components/Experiences"
 import Header from '../Components/Header'
-import Educations from "../Components/Education"
+// import Educations from "../Components/Education"
 
 const About = () => {
     return (

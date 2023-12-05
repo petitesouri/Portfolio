@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { setSelectedImage } from "../redux/actions/datas.action";
-import Chevron from '../assets/chevron-en-bas.png'
+import Chevron from '../assets/chevron-en-bas.webp'
 import { motion } from 'framer-motion';
 
 const Modal = ({ isOpen, onClose, selectedImage, datasProject }) => {

@@ -3,56 +3,56 @@
         {
             "id": "p2a2023",
             "title": "INTÉGRER",
-            "cover": "/images/projects/Argent Bank.png",
+            "cover": "/images/projects/Argent Bank.webp",
             "description": "Au coeur de cette intégration: la gestion des états avec REDUX, sans oublier la sécurité of course!"
         },
         {
             "id": "p3a2023",
             "title": "DÉVELOPPER",
-            "cover": "/images/projects/Kasa.png",
+            "cover": "/images/projects/Kasa.webp",
             "description": "Comment se servir de ce  que l'on a déjà créer? Il n'y a pas de petites économies d'énergie."
         },
         {
             "id": "p4a2023",
             "title": "OPTIMISER",
-            "cover": "/images/projects/Sophie Bluel.png",
+            "cover": "/images/projects/Sophie Bluel.webp",
             "description": "Mes premiers pas en Javascript, ça méritait d'être en première page."
         },
         {
             "id": "p1a2023",
             "title": "CRÉER",
-            "cover": "/images/projects/Portfolio.png",
+            "cover": "/images/projects/Portfolio.webp",
             "description": "Mon dernier projet. J'ai pu laisser s'exprimer ma créativité."
         }
     ],
     "skills": [
         {
             "title":"Figma",
-            "src": "/images/skills/Figma.png"
+            "src": "/images/skills/Figma.webp"
         },
         {
             "title":"GitHub",
-            "src": "/images/skills/GITHUB.png"
+            "src": "/images/skills/GITHUB.webp"
         },
         {
             "title":"JavaScript",
-            "src": "/images/skills/javascript.png"
+            "src": "/images/skills/javascript.webp"
         },
         {
             "title":"React",
-            "src": "/images/skills/REACT.png"
+            "src": "/images/skills/REACT.webp"
         },
         {
             "title":"Redux",
-            "src": "/images/skills/Redux.png"
+            "src": "/images/skills/Redux.webp"
         },
         {
             "title":"SASS",
-            "src": "/images/skills/SASS.png"
+            "src": "/images/skills/SASS.webp"
         },
         {
             "title":"WordPress",
-            "src": "/images/skills/WORDPRESS.png"
+            "src": "/images/skills/WORDPRESS.webp"
         }
     ],
     "experiences": [
