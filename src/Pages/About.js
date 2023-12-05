@@ -1,13 +1,25 @@
+import Modal from '../Components/Modal'
+import { openModal, contactMode } from '../redux/actions/styles.action';
+import { useSelector, useDispatch } from "react-redux"
+
 import Selfie from "../assets/Selfie.webp"
-import Facebook from "../assets/social Networks/facebook.webp"
+// import Facebook from "../assets/social Networks/facebook.webp"
 import LinkedIn from "../assets/social Networks/linkedin.webp"
-import Instagram from "../assets/social Networks/instagram.webp"
+// import Instagram from "../assets/social Networks/instagram.webp"
+import GitHub from "../assets/social Networks/github.webp"
 import Heart from "../assets/heart.webp"
 import Experiences from "../Components/Experiences"
 import Header from '../Components/Header'
-// import Educations from "../Components/Education"
 
 const About = () => {
+    const dispatch = useDispatch()
+    const isModalOpen = useSelector(state => state.stylesReducer.isModalOpen)
+    
+    const handleOpenModal = () => {
+        dispatch(openModal(true));
+        dispatch(contactMode(true));
+    };
+    
     return (
         <>
         <Header 
@@ -30,9 +42,14 @@ const About = () => {
                         Parlons en!
                     </p>
                     <figure className="section-hero__social-icons">
-                        <img src={Facebook} alt="Facebook" />
-                        <img src={Instagram} alt="Instagram" />
-                        <img src={LinkedIn} alt="LinkedIn" />                        
+                        {/* <img src={Facebook} alt="Facebook" />
+                        <img src={Instagram} alt="Instagram" /> */}
+                        <a href='https://www.linkedin.com/in/virginie-rudowski-7b154b294/' target="_blank" rel="noopener noreferrer">
+                            <img src={LinkedIn} alt="LinkedIn" /> 
+                        </a>
+                        <a href={`https://github.com/petitesouri`} target="_blank" rel="noopener noreferrer">
+                            <img src={GitHub} alt="GitHub" />
+                        </a>                                               
                     </figure> 
                 </article>                         
             </section>
@@ -75,9 +92,19 @@ const About = () => {
                 </blockquote>
                 < Experiences />                
             </section> 
-            {/* <section className="section-education">
-                <Educations/>
-            </section>    */}
+            <section className="section-contact">
+                <p className="contact-button" onClick={handleOpenModal}>Me contacter</p>
+                <Modal 
+                    isOpen={isModalOpen} 
+                    onClose={() => dispatch(openModal(false))}
+                />
+                <figure className="section-hero__social-icons">
+                    {/* <img src={Facebook} alt="Facebook" />
+                    <img src={Instagram} alt="Instagram" /> */}
+                    <img src={LinkedIn} alt="LinkedIn" /> 
+                    <img src={GitHub} alt="GitHub" />                       
+                </figure>
+            </section>
         </main>
         </>
     )

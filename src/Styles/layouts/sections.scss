@@ -114,16 +114,6 @@
         }
     } 
 }
-// .slider-list::-webkit-scrollbar {
-//     width: 1px;
-//     display: none;    
-// }
-// .slider-list::-webkit-scrollbar-track {
-//     background: $light-blue-color;
-// }
-// .slider-list::-webkit-scrollbar-thumb {
-//     background: $light-blue-color;
-// }
 
 @include mobile-and-tablet {
     .section-slider{
@@ -189,6 +179,10 @@
     &__social-icons {
         display: flex;
         gap: 1.25rem;
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
     }
 }
 @include mobile-and-tablet {
@@ -343,5 +337,25 @@
     .section-career {
         padding: 10px;
         gap: 3rem;
+    }
+}
+
+// Section contact
+.section-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+    .contact-button {
+        font-family: $title-font-family;
+        font-size: 2.25rem;
+        background-color: #FFD23F;
+        border-radius: 15px;
+        padding: 1.25rem;
+        @include mobile-and-tablet {
+            font-size: 1.5rem;
+            padding: 0.8rem;
+        }
     }
 }

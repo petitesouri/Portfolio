@@ -3,7 +3,7 @@ import VerticalSlider from '../Components/Slider';
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { setSelectedImage } from '../redux/actions/datas.action';
-import { openModal } from '../redux/actions/styles.action';
+import { openModal, contactMode } from '../redux/actions/styles.action';
 import ArrowSand from '../assets/arrow-sand.webp'
 import Header from '../Components/Header'
 import Modal from '../Components/Modal'
@@ -53,6 +53,7 @@ const Landing = ({ datasProject, datasSkills }) => {
 
   const handleOpenModal = () => {
     dispatch(openModal(true));
+    dispatch(contactMode(false))
   };
 
   return (    

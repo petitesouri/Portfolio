@@ -25,7 +25,10 @@ header {
     background-color: $light-blue-color;
 }
 .header.about {
+    width: 100%;
     background-color: $dark-blue-color;
+    position: fixed;
+    z-index: 10;
     .header-link {
         background-color: $yellow-color;
         border-radius: 25px;

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { setSelectedImage } from "../redux/actions/datas.action"
-import { openModal } from "../redux/actions/styles.action";
+import { openModal, contactMode } from "../redux/actions/styles.action";
 
 const VerticalSlider = ({ datasProject, sliderRef }) => {
   const dispatch = useDispatch();  
@@ -8,6 +8,7 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
   const handleImageClick = (index) => {
     dispatch(setSelectedImage(index));
     dispatch(openModal(true));
+    dispatch(contactMode(false))
   };
   
   return (

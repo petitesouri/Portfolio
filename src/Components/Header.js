@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Header = (props) => {
     const [hoverText, setHoverText] = useState(props.text);
-
+    
     return (
         <header className={`header ${props.path}`}>
             <nav>                
