@@ -6,6 +6,9 @@ main {
     padding: 1.5625rem 8.625rem;
     gap: 5px;
 }
+.landing-page {
+    animation: Landing 1s 3s linear;
+}
 
 .landing-page::after {
     content: "";

@@ -1,10 +1,64 @@
+// animations loader
+@keyframes Landing {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0.7
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Loader {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes textHeader {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes backgroundLoader {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes Loader-slider {
+  0% {
+    transform: perspective(400px) rotateX(45deg) translate3d(0, -250%, 0);
+  }
+  50% {
+    transform: perspective(400px) rotateX(45deg) translate3d(0, 0, 0)  
+  }
+  100% {
+    transform: rotate3d(2, -2, 0.4, 34deg);
+  }
+}
+
 // animation slider vertical
 @keyframes slideImage {
-    0% {
-        transform: translateX(0);    }
-    100% {
-        transform: translateX(-550%);
-    }
+  0% {
+    transform: translateX(0);    }
+  100% {
+    transform: translateX(-550%);
+  }
 }
 // animation défilement horizontal
 @keyframes scrollLeft {
@@ -15,17 +69,6 @@
     transform: translateX(-100%);
   }
 }
-// animation section career
-// @keyframes fall {
-//   0% {
-//     height: 0;
-//     opacity: 0;
-//   }
-//   100% {
-//     height: 100%;
-//     opacity: 1;
-//   }
-// }
 
 // animation heart
 @keyframes heartbeat {
@@ -47,25 +90,3 @@
     transform: scale(1);
   }
 }
-
-
-// @keyframes appearLeft {
-//   0% {
-//     opacity: 0;
-//     transform: translateX(-100px);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-// }
-// @keyframes appearRight {
-//   0% {
-//     opacity: 0;
-//     transform: translateX(100px);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-// }

@@ -36,11 +36,11 @@
     "skills": [
         {
             "title":"Figma",
-            "src": "/images/skills/Figma.webp"
+            "src": "/images/skills/figma.png"
         },
         {
             "title":"GitHub",
-            "src": "/images/skills/GITHUB.webp"
+            "src": "/images/skills/github.webp"
         },
         {
             "title":"JavaScript",
@@ -48,19 +48,19 @@
         },
         {
             "title":"React",
-            "src": "/images/skills/REACT.webp"
+            "src": "/images/skills/react.webp"
         },
         {
             "title":"Redux",
-            "src": "/images/skills/Redux.webp"
+            "src": "/images/skills/redux.webp"
         },
         {
             "title":"SASS",
-            "src": "/images/skills/SASS.webp"
+            "src": "/images/skills/sass.webp"
         },
         {
             "title":"WordPress",
-            "src": "/images/skills/WORDPRESS.webp"
+            "src": "/images/skills/wordpress.webp"
         }
     ],
     "experiences": [

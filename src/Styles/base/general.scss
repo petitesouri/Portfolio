@@ -10,7 +10,7 @@ h1, h2, h3, p, .section-text, .section-text-link {
 }
 
 body {
-  background-color: $sand-color;
+  background-color: $light-blue-color;
   font-family: $text-font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,6 +49,9 @@ a {
 }
 ul {
   list-style-type: none;
+}
+img {
+  object-fit: cover;
 }
 
 @include tablet {

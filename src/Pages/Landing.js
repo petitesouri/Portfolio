@@ -6,16 +6,18 @@ import { setSelectedImage } from '../redux/actions/datas.action';
 import { openModal, contactMode } from '../redux/actions/styles.action';
 import ArrowSand from '../assets/arrow-sand.webp'
 import ArrowYellow from '../assets/arrow-yellow.webp'
+
+import Loader from '../Components/Loader'
 import Header from '../Components/Header'
 import Modal from '../Components/Modal'
 
-const Landing = ({ datasProject, datasSkills }) => {   
+const Landing = ({ datasProject, datasSkills, loading }) => {   
   const dispatch = useDispatch()
   const sliderRef = useRef() 
   const isModalOpen = useSelector(state => state.stylesReducer.isModalOpen)
   const selectedImage = useSelector(state => state.dataReducer.index);
   const [isHovered, setIsHovered] = useState(false);
- 
+  console.log(loading)
   const text = (
     datasProject.map((item, index) => { 
         return (             
@@ -56,74 +58,159 @@ const Landing = ({ datasProject, datasSkills }) => {
     dispatch(openModal(true));
     dispatch(contactMode(false))
   };
-
-  return (    
-    <div  className="landing-page">
-      <Header
-        path="landing" 
-        title="Virginie RUDOWSKI" 
-        text="A propos"
-      />
-      <main className='main-theme'>
-        <div className='section-left'>
-          <section className="section-text">
-            { text }
-          </section>
-          <section className="section-text-link">
-            <p>Découvrez mes projets </p>
-            <div
-              className='section-text-link__arrows'
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <img
-                className='arrow-sand'
-                src={ArrowSand}
-                alt="arrow-sand"
-                onClick={handleOpenModal}
-              />
-              {isHovered && 
-                <img 
-                  className="arrow-yellow" 
-                  src={ArrowYellow} 
-                  alt="arrow-yellow"
-                  onClick={handleOpenModal} 
-              />}
-            </div>
-          </section>
-          <section className='section-skills'>
-            <div className='section-skills__logos'>
-              { datasSkills.map((item, index) => (
-                <img key={index} src={item.src} alt={item.title} />
-              )) }
-            </div>          
-          </section>
-        </div>
-        <section className="section-slider">
-          <VerticalSlider 
-            id='showScroll' 
-            sliderRef={sliderRef} 
-            datasProject={datasProject}
-          />
-          <Modal 
-            isOpen={isModalOpen} 
-            onClose={() => dispatch(openModal(false))}
-            selectedImage={selectedImage}
-            datasProject={datasProject} 
-          />
-        </section>
-        <section className='dots'>
-            {datasProject.map((item, index) => (            
-                <div 
-                  key={item.id} 
-                  className={index === selectedImage ? 'dots_dot selected' : 'dots_dot'}
-                  onClick={() => handleClickDots(index)}>
-                </div>           
-            ))}
-        </section>
-      </main>
-    </div>
+console.log(loading)
+  return (
+    <>
+      { loading ? <Loader datasProject={datasProject}/> : null }
+      {/* <Loader datasProject={datasProject}/> */}
+        <>
+          <div className="landing-page">
+            <Header
+              path="landing" 
+              title="Virginie RUDOWSKI" 
+              text="A propos"
+            />
+            <main className='main-theme'>
+              <div className='section-left'>
+                <section className="section-text">
+                  {text}
+                </section>
+                <section className="section-text-link">
+                  <p>Découvrez mes projets </p>
+                  <div
+                    className='section-text-link__arrows'
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                  >
+                    <img
+                      className='arrow-sand'
+                      src={ArrowSand}
+                      alt="arrow-sand"
+                      onClick={handleOpenModal}
+                    />
+                    {isHovered && 
+                      <img 
+                        className="arrow-yellow" 
+                        src={ArrowYellow} 
+                        alt="arrow-yellow"
+                        onClick={handleOpenModal} 
+                    />}
+                  </div>
+                </section>
+                <section className='section-skills'>
+                  <div className='section-skills__logos'>
+                    {datasSkills.map((item, index) => (
+                      <img key={index} src={item.src} alt={item.title} />
+                    ))}
+                  </div>          
+                </section>
+              </div>
+              <section className="section-slider">
+                <VerticalSlider 
+                  id='showScroll' 
+                  sliderRef={sliderRef} 
+                  datasProject={datasProject}
+                />
+                <Modal 
+                  isOpen={isModalOpen} 
+                  onClose={() => dispatch(openModal(false))}
+                  selectedImage={selectedImage}
+                  datasProject={datasProject} 
+                />
+              </section>
+              <section className='dots'>
+                {datasProject.map((item, index) => (            
+                  <div 
+                    key={item.id} 
+                    className={index === selectedImage ? 'dots_dot selected' : 'dots_dot'}
+                    onClick={() => handleClickDots(index)}
+                  >
+                  </div>           
+                ))}
+              </section>
+            </main>
+          </div>
+        </>
+    </>
   );
+  // return (
+  //   <>
+  //     {loading ? (
+  //       // < Loader/>
+  //       <p>CA MARCHE</p>
+  //     ) : (
+  //       <>
+  //         <div className="landing-page">
+  //           <Header
+  //             path="landing" 
+  //             title="Virginie RUDOWSKI" 
+  //             text="A propos"
+  //           />
+  //           <main className='main-theme'>
+  //             <div className='section-left'>
+  //               <section className="section-text">
+  //                 {text}
+  //               </section>
+  //               <section className="section-text-link">
+  //                 <p>Découvrez mes projets </p>
+  //                 <div
+  //                   className='section-text-link__arrows'
+  //                   onMouseEnter={() => setIsHovered(true)}
+  //                   onMouseLeave={() => setIsHovered(false)}
+  //                 >
+  //                   <img
+  //                     className='arrow-sand'
+  //                     src={ArrowSand}
+  //                     alt="arrow-sand"
+  //                     onClick={handleOpenModal}
+  //                   />
+  //                   {isHovered && 
+  //                     <img 
+  //                       className="arrow-yellow" 
+  //                       src={ArrowYellow} 
+  //                       alt="arrow-yellow"
+  //                       onClick={handleOpenModal} 
+  //                   />}
+  //                 </div>
+  //               </section>
+  //               <section className='section-skills'>
+  //                 <div className='section-skills__logos'>
+  //                   {datasSkills.map((item, index) => (
+  //                     <img key={index} src={item.src} alt={item.title} />
+  //                   ))}
+  //                 </div>          
+  //               </section>
+  //             </div>
+  //             <section className="section-slider">
+  //               <VerticalSlider 
+  //                 id='showScroll' 
+  //                 sliderRef={sliderRef} 
+  //                 datasProject={datasProject}
+  //               />
+  //               <Modal 
+  //                 isOpen={isModalOpen} 
+  //                 onClose={() => dispatch(openModal(false))}
+  //                 selectedImage={selectedImage}
+  //                 datasProject={datasProject} 
+  //               />
+  //             </section>
+  //             <section className='dots'>
+  //               {datasProject.map((item, index) => (            
+  //                 <div 
+  //                   key={item.id} 
+  //                   className={index === selectedImage ? 'dots_dot selected' : 'dots_dot'}
+  //                   onClick={() => handleClickDots(index)}
+  //                 >
+  //                 </div>           
+  //               ))}
+  //             </section>
+  //           </main>
+  //         </div>
+  //       </>
+  //     )}
+  //   </>
+  // );
+  
 }
 
 export default Landing;

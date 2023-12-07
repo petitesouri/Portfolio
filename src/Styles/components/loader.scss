@@ -1,0 +1,79 @@
+/* Loader.css */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px 30px 100px 30px;
+    z-index: 1000;
+    animation: Loader 1s 3s linear;
+    &__layout{
+        display: flex; 
+        align-items: end; 
+        justify-content: space-between;
+        .citation {
+            font-size: 0.8rem;
+            width: 40%;
+            border: 1px solid white;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 25px;
+            padding: 15px;
+            margin-left: 20px;
+        } 
+        .slider-container {            
+            width: 43%;
+            max-height: 80vh;
+            margin: 0;           
+            animation: Loader-slider 1.5s linear forwards;            
+            .slider-list {
+                transform: none;
+                overflow: visible;
+            }
+        }
+    }
+    h1 {
+        position: relative;
+        margin-left: calc(8rem - 20px);
+    }
+    h1::before{
+        width: 100%;
+        height: 0;
+        color: $sand-color;
+        overflow: hidden;
+        position: absolute;
+        content: attr(data-text);       
+        animation: textHeader 1s 1s linear forwards;
+    }
+    p {
+        margin-left: 9rem;
+        font-size: 1.5rem;
+        font-family: $subtitle-font-family;
+    }
+}
+.loader::before {
+    width: 20px;
+    height: 0;
+    background-color: $sand-color;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: textHeader 1s 1s linear forwards; 
+}
+.loader::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: $light-blue-color;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    z-index: -1;
+    animation: backgroundLoader 0.8s 1s linear forwards;
+}
