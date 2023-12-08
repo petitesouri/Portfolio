@@ -1,15 +1,15 @@
 import React from 'react';
-import VerticalSlider from '../Components/Slider';
 import { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { setSelectedImage } from '../redux/actions/datas.action';
 import { openModal, contactMode } from '../redux/actions/styles.action';
+
 import ArrowSand from '../assets/arrow-sand.webp'
 import ArrowYellow from '../assets/arrow-yellow.webp'
-
 import Loader from '../Components/Loader'
 import Header from '../Components/Header'
 import Modal from '../Components/Modal'
+import VerticalSlider from '../Components/Slider';
 
 const Landing = ({ datasProject, datasSkills, loading }) => {   
   const dispatch = useDispatch()
@@ -62,7 +62,6 @@ console.log(loading)
   return (
     <>
       { loading ? <Loader datasProject={datasProject}/> : null }
-      {/* <Loader datasProject={datasProject}/> */}
         <>
           <div className="landing-page">
             <Header

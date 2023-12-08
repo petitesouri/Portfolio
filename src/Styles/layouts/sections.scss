@@ -40,19 +40,19 @@
     border: 20px solid white;
     display: flex;
     align-items: center;
+    position: relative;
     overflow: hidden;
     &__logos {
-        width: 6.25rem;
-        height: 6.25rem; 
-        display: flex;
-        align-items: center;
-        gap: 3.75rem; 
-        margin-inline-start: 12.5rem;
+        width: 100%;
+        display: inline-flex;
+        position: relative;
+        left: 145px;
         animation: slideImage 7s linear infinite;
     }
     img {
         width: 6.25rem;
-        height: 6.25rem;        
+        height: 6.25rem; 
+        margin: 0 3rem;      
     }
 }
 
@@ -123,7 +123,6 @@
         padding-bottom: 3.75rem; 
         img { 
             width: 90%;
-            height: 31.25rem;
             box-shadow: 20px 10px 20px 0px rgba(0, 0, 0, 0.25);     
         }
     } 

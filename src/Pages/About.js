@@ -26,6 +26,7 @@ const About = () => {
             path="about"
             title="<- RETOUR" 
             text="dipie89@hotmail.fr"
+            specificLink="/about#contact"
         />
         <main className='about-theme'>      
             <section className="section-hero">

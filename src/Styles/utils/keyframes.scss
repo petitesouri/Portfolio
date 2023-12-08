@@ -52,21 +52,13 @@
   }
 }
 
-// animation slider vertical
+// animation défilement horizontal
 @keyframes slideImage {
   0% {
-    transform: translateX(0);    }
+    left: 145px;   
+  };
   100% {
-    transform: translateX(-550%);
-  }
-}
-// animation défilement horizontal
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(100%); 
-  }
-  100% {
-    transform: translateX(-100%);
+    left: -1350px;
   }
 }
 
