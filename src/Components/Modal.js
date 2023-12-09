@@ -21,7 +21,6 @@ const Modal = ({ isOpen, onClose, selectedImage, datasProject }) => {
   };
 
   const handleNextProject = () => {
-    // fonction qui parcours tous les indices de 0 à datasProject.length et revient à 0 
     if (selectedImage !== undefined && datasProject !== undefined) {
       const nextIndex = (selectedImage + 1) % datasProject.length;
       dispatch(setSelectedImage(nextIndex));

@@ -58,10 +58,9 @@ const Landing = ({ datasProject, datasSkills, loading }) => {
     dispatch(openModal(true));
     dispatch(contactMode(false))
   };
-// retirer ici la partie qui m'affiche mon loader pour travailler
+
   return (
     <>
-    {/* <Loader datasProject={datasProject}/>  */}
       { loading ? (
         <Loader datasProject={datasProject}/> 
         ) : (        
