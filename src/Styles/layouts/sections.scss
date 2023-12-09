@@ -10,7 +10,13 @@
 }
 .section-text {
     width: 31.25rem; 
-    padding-top: 11.25rem;
+    padding-top: 8rem;
+    .text-item {
+        p {
+            font-size: 1.25rem;
+            padding-right: 15px;
+        }
+    }
 }
 .section-text .hidden {
     display: none;
@@ -55,6 +61,11 @@
         margin: 0 3rem;      
     }
 }
+.section-skills.loading {
+    .section-skills__logos {
+        animation: none;
+    }
+}
 
 @include mobile-and-tablet {
     .section-left {
@@ -70,11 +81,10 @@
         height: 6.25rem;
         background-color: $light-blue-color;
         border: none;
-        overflow: visible;
+        overflow: hidden;
         &__logos {
             gap: 1.75rem;; 
             margin-inline-start: 0;
-            animation: none;
         }
         img {
             width: 2.25rem;
@@ -137,13 +147,14 @@
             flex-direction: row;
             flex-wrap: nowrap;
             transform: none;             
-            gap: 25px; 
+            gap: 50px; 
             padding: 0;
             &__image {
                 flex: 0 0 auto;
                 padding: 0;
                 img {
-                    width: 25rem;                    
+                    width: 25rem;  
+                    height: 100%;                  
                 }
             }
         }     
@@ -160,16 +171,19 @@
 
 // About Page
 .section-hero {
+    width: 100%;
     display: grid;
     padding: 80px 0;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 55%;
+    position: relative;
+    top: 100px;
     &__picture {
-        width: 37.5rem;
-        height: 37.5rem;
+        width: 320px;
+        height: 320px;
         background-color: $yellow-color;
         border-radius: 50%;
         position: relative;
-        left: -14.375rem;
+        left: -8.5rem;
         box-shadow: 20px -11px 20px 3px rgba(0, 0, 0, 0.25);
         img {
             width: 80%;
@@ -211,6 +225,12 @@
         &__text {
             width: 29rem;
         }
+        &__social-icons {
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
     }
 }
 @include mobile {
@@ -238,6 +258,8 @@
     flex-direction: column;
     gap: 6.25rem;
     padding: 3.75rem 8rem;
+    position: relative;
+    top: 100px;
     &__article {
        font-size: 20px; 
        max-width: 80%;
@@ -261,6 +283,9 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 15px;
+            h2 {
+                font-size: 1rem;
+            }
             p {
                 width: 100%;
             }
@@ -272,6 +297,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    top: 100px;
     &__heart {
         width: 4.375rem;
         animation: heartbeat 1s infinite;
@@ -303,7 +329,9 @@
     margin-bottom: 6.25rem;
 }
 .section-like__headband {
-    word-spacing: 7rem;
+    width: 200%;
+    height: 50px;
+    word-spacing: 50px;
     animation: scrollLeft 10s linear infinite;    
 }
 @include mobile {
@@ -335,9 +363,10 @@
     overflow: hidden;
     margin-bottom: 100px;
     padding: 3.75rem 8rem;
+    position: relative;
+    top: 100px;
     &__experience {
         width: 100%;
-        max-width: 80%;
         height: 31.25rem;
         display: flex;
     }
@@ -346,13 +375,16 @@
 @include mobile-and-tablet { 
     .section-career {
         padding: 1.56rem 1.875rem;
+        margin: 0 2.5rem;
     }      
 }
 @include mobile {
     .section-career {
-        padding: 10px;
+        padding: 0 30px;
         gap: 3rem;
+        margin: 0;
     }
+    
 }
 
 // Section contact
@@ -362,10 +394,13 @@
     justify-content: center;
     gap: 60px;
     margin-bottom: 60px;
+    position: relative;
+    top: 40px;
     .contact-button {
         font-family: $title-font-family;
         font-size: 2.25rem;
-        background-color: #FFD23F;
+        background-color: $yellow-color;
+        border: none;
         border-radius: 15px;
         padding: 1.25rem;
         @include mobile-and-tablet {

@@ -12,7 +12,7 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
   };
   
   return (
-      <ul ref={sliderRef} className="slider-list" >
+      <ol ref={sliderRef} className="slider-list" >
         {datasProject.map((item, index) => (
           <li key={index} className='slider-list__image'>
             <img 
@@ -23,7 +23,7 @@ const VerticalSlider = ({ datasProject, sliderRef }) => {
                 />
           </li>
         ))}
-      </ul>
+      </ol>
   );
 }
 

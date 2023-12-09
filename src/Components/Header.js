@@ -11,8 +11,8 @@ const Header = (props) => {
     return (
         <header className={`header ${props.path}`}>
             <nav>                
-                <Link to="/">
-                    <h1>{props.title}</h1>
+                <Link to="/" className="name">
+                    {props.title}
                 </Link>
                 {props.showAboutLink && (
                     <motion.div

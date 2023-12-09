@@ -16,18 +16,19 @@ const Loader = ({ datasProject }) => {
       
     useEffect(() => {
     animateText();
-    }, []);
+    });
 
     return (
         <div className="loader">
-            <motion.h1
+            <motion.a
+                className="name"
                 data-text="Virginie RUDOWSKI"
                 animate={textAnimation}
                 initial={{ x: -100, opacity: 0 }}
                 style={{ originX: 0 }}
             >
                 Virginie RUDOWSKI
-            </motion.h1>
+            </motion.a>
             <motion.p
                 animate={{
                     x: 0,

@@ -17,26 +17,26 @@ const Landing = ({ datasProject, datasSkills, loading }) => {
   const isModalOpen = useSelector(state => state.stylesReducer.isModalOpen)
   const selectedImage = useSelector(state => state.dataReducer.index);
   const [isHovered, setIsHovered] = useState(false);
-  console.log(loading)
+  
   const text = (
     datasProject.map((item, index) => { 
         return (             
         <div key={item.id} className={`text-item ${selectedImage === index ? 'visible' : 'hidden'}`}>
-          <h2>{item.title}</h2>
+          <h1>{item.title}</h1>
           <p>{item.description}</p>
         </div>                
       )
     })
   )
 
-  const handleClickDots = (index) => {
+  const handleClickDots = async (index) => {
     dispatch(setSelectedImage(index));
       // Accéder au composant VerticalSlider et effectuer le défilement
       if (sliderRef.current) {
         const selectedImageElement = sliderRef.current.children[index];
         const scrollOptions = { behavior: "smooth" };
     
-        if (window.innerWidth > 1024) {
+        if (window.innerWidth > 920) {
           // Mode desktop : Défilement vertical
           const verticalOffset =
             selectedImageElement.offsetTop -
@@ -58,10 +58,13 @@ const Landing = ({ datasProject, datasSkills, loading }) => {
     dispatch(openModal(true));
     dispatch(contactMode(false))
   };
-console.log(loading)
+// retirer ici la partie qui m'affiche mon loader pour travailler
   return (
     <>
-      { loading ? <Loader datasProject={datasProject}/> : null }
+    {/* <Loader datasProject={datasProject}/>  */}
+      { loading ? (
+        <Loader datasProject={datasProject}/> 
+        ) : (        
         <>
           <div className="landing-page">
             <Header
@@ -75,7 +78,7 @@ console.log(loading)
                   {text}
                 </section>
                 <section className="section-text-link">
-                  <p>Découvrez mes projets </p>
+                  <h2>Découvrez mes projets </h2>
                   <div
                     className='section-text-link__arrows'
                     onMouseEnter={() => setIsHovered(true)}
@@ -96,7 +99,7 @@ console.log(loading)
                     />}
                   </div>
                 </section>
-                <section className='section-skills'>
+                <section className={`section-skills ${loading ? 'loading' : ''}`}>
                   <div className='section-skills__logos'>
                     {datasSkills.map((item, index) => (
                       <img key={index} src={item.src} alt={item.title} />
@@ -130,85 +133,9 @@ console.log(loading)
             </main>
           </div>
         </>
+        ) }
     </>
   );
-  // return (
-  //   <>
-  //     {loading ? (
-  //       // < Loader/>
-  //       <p>CA MARCHE</p>
-  //     ) : (
-  //       <>
-  //         <div className="landing-page">
-  //           <Header
-  //             path="landing" 
-  //             title="Virginie RUDOWSKI" 
-  //             text="A propos"
-  //           />
-  //           <main className='main-theme'>
-  //             <div className='section-left'>
-  //               <section className="section-text">
-  //                 {text}
-  //               </section>
-  //               <section className="section-text-link">
-  //                 <p>Découvrez mes projets </p>
-  //                 <div
-  //                   className='section-text-link__arrows'
-  //                   onMouseEnter={() => setIsHovered(true)}
-  //                   onMouseLeave={() => setIsHovered(false)}
-  //                 >
-  //                   <img
-  //                     className='arrow-sand'
-  //                     src={ArrowSand}
-  //                     alt="arrow-sand"
-  //                     onClick={handleOpenModal}
-  //                   />
-  //                   {isHovered && 
-  //                     <img 
-  //                       className="arrow-yellow" 
-  //                       src={ArrowYellow} 
-  //                       alt="arrow-yellow"
-  //                       onClick={handleOpenModal} 
-  //                   />}
-  //                 </div>
-  //               </section>
-  //               <section className='section-skills'>
-  //                 <div className='section-skills__logos'>
-  //                   {datasSkills.map((item, index) => (
-  //                     <img key={index} src={item.src} alt={item.title} />
-  //                   ))}
-  //                 </div>          
-  //               </section>
-  //             </div>
-  //             <section className="section-slider">
-  //               <VerticalSlider 
-  //                 id='showScroll' 
-  //                 sliderRef={sliderRef} 
-  //                 datasProject={datasProject}
-  //               />
-  //               <Modal 
-  //                 isOpen={isModalOpen} 
-  //                 onClose={() => dispatch(openModal(false))}
-  //                 selectedImage={selectedImage}
-  //                 datasProject={datasProject} 
-  //               />
-  //             </section>
-  //             <section className='dots'>
-  //               {datasProject.map((item, index) => (            
-  //                 <div 
-  //                   key={item.id} 
-  //                   className={index === selectedImage ? 'dots_dot selected' : 'dots_dot'}
-  //                   onClick={() => handleClickDots(index)}
-  //                 >
-  //                 </div>           
-  //               ))}
-  //             </section>
-  //           </main>
-  //         </div>
-  //       </>
-  //     )}
-  //   </>
-  // );
   
 }
 

@@ -1,8 +1,13 @@
 $dark-blue-color: #0077A2;
-$light-blue-color:#4CB0A9;
+$light-blue-color:#4cb0a9fe;
 $sand-color:#E1CBA8;
 $text-color:#F4F4F4;
-$yellow-color:#FFD23F;
+$yellow-color:#ffae00fe;
+
+// variables Javascript
+:root {
+    --yellow-color:#ffae00fe;
+}
 
 $title-font-family: "Post No Bills Jaffna Bold";
 $subtitle-font-family: "Overpass Regular";

@@ -3,13 +3,13 @@ main {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 1.5625rem 8.625rem;
+    padding: 1rem 8.5rem 0 8.5rem;
     gap: 5px;
 }
 .landing-page {
-    animation: Landing 1s 3s linear;
+    height: 100vh;
+    position: relative;
 }
-
 .landing-page::after {
     content: "";
     position: absolute;

@@ -51,6 +51,17 @@
     transform: rotate3d(2, -2, 0.4, 34deg);
   }
 }
+// animations loader responsive
+@include mobile-and-tablet {
+  @keyframes Loader-slider {
+    from {
+      transform: translateX(500px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
+}
 
 // animation défilement horizontal
 @keyframes slideImage {
@@ -59,6 +70,14 @@
   };
   100% {
     left: -1350px;
+  }
+}
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }
 

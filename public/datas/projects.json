@@ -20,7 +20,7 @@
             "id": "p4a2023",
             "title": "OPTIMISER",
             "cover": "/images/projects/Sophie Bluel.webp",
-            "description": "La base: Javascript, boucles et conditions.",
+            "description": "La base d'un site dynamique: Javascript, boucles et conditions.",
             "feedback": "Apprendre à travailler avec des designers, ça ne s'improvise pas. Et connaitre les bases de javascript pour obtenir un site dynamique non plus. What else {}?",
             "link":"https://github.com/petitesouri/OC-Projet-6.git"
         },
@@ -28,7 +28,7 @@
             "id": "p1a2023",
             "title": "CRÉER",
             "cover": "/images/projects/Portfolio.webp",
-            "description": "A vous de trouver les animations cachées.",
+            "description": "Un compilé de toutes mes compétences: Javascript, React, Redux, Sass...A vous de trouver les animations cachées.",
             "feedback": "Je voulais un portfolio qui me représente: dynamique, avec une touche de curiosité. Par ci par là, il y a de petites animations subtiles à découvrir. Je me suis vraiment beaucoup amusée à réaliser ce site.",
             "link":"https://github.com/petitesouri/Portfolio.git"
         }

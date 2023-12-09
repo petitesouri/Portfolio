@@ -35,7 +35,7 @@ const App = () => {
       setDatasSkills(skills)
       setTimeout(() => {
         setLoading(false);
-      }, 2700);
+      }, 2300);
       })  
       .catch((error) => console.error('Erreur lors du chargement des données', error));
   }, []);

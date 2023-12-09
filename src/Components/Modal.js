@@ -35,6 +35,15 @@ const Modal = ({ isOpen, onClose, selectedImage, datasProject }) => {
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
+  const formatFeedbackText = (feedback) => {
+    const formattedText = feedback
+      .replace(/react/g, '<span style="color: var(--yellow-color);">REACT</span>')
+      .replace(/REDUX/g, '<span style="color: var(--yellow-color);">REDUX</span>')
+      .replace(/javascript/g, '<span style="color: var(--yellow-color);">JAVASCRIPT</span>');
+    return <p dangerouslySetInnerHTML={{ __html: formattedText }} />;
+  };
+  const formattedFeedback = selectedItem ? formatFeedbackText(selectedItem.feedback) : null;
+
   return (
     <motion.div
       className="modal-overlay"
@@ -79,7 +88,7 @@ const Modal = ({ isOpen, onClose, selectedImage, datasProject }) => {
                   <button onClick={onClose} className="close-button">X</button>
                 </div>        
                 <img src={selectedItem.cover} alt={selectedItem.cover} />
-                <p>{selectedItem.feedback}</p>
+                {formattedFeedback}
                 <a href={selectedItem.link} target="_blank" rel="noopener noreferrer">{selectedItem.link}</a>
                 <img src={Chevron} alt="Chevron" className="next-button" onClick={handleNextProject}></img>
               </>

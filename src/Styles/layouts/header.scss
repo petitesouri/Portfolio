@@ -17,45 +17,70 @@ header {
             margin: 0;
         }
     }
-    @include mobile-and-tablet {
-        padding: 1.56rem 1.875rem;
-    }
 }
-.header.landing {
-    background-color: $light-blue-color;
-}
-.header.about {
-    width: 100%;
+.about-page .header.about {
+    width: 90%;
     background-color: $dark-blue-color;
     position: fixed;
     z-index: 10;
+    display: flex;
+    margin: 0 auto;
+    padding: 1.56rem;
+    nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 21rem;
+    }
     .header-link {
+        // width: 21.875rem;
         background-color: $yellow-color;
         border-radius: 25px;
+        display: flex;
+        justify-content: center;
         padding: 5px 10px;
     }
+}
+@include mobile-and-tablet {
+    header {
+        height: 60px;
+        padding: 1.56rem 1.875rem;
+    }
+    .about-page .header.about { 
+        padding: 1rem;
+        nav {
+            grid-template-columns: 1fr 40%;
+        }  
+    }
+}
+@include mobile {
+    .about-page .header.about {
+        nav {
+            .header-link {
+                width: 150px;
+            }
+        }  
+    } 
 }
 
 .interchange-letters {
     display: flex;
-  }
-  
-  .letter {
-    display: inline-block;
-    font-size: 24px;
-    margin: 0 4px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    @include tablet {
-        font-size: 1rem;
-    }
-    @include mobile {
-        font-size: 1rem;
-        margin: 0;
-    }
-  }
-  
-  .letter:hover {
-    transform: rotate(180deg);
+    .letter {
+        display: inline-block;
+        font-size: 24px;
+        margin: 0 4px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        @include tablet {
+            font-size: 1rem;
+        }
+        @include mobile {
+            font-size: 0.8rem;
+            margin: 0;
+        }
+      }
+      
+      .letter:hover {
+        transform: rotate(180deg);
+      }
   }
   

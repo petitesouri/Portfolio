@@ -8,21 +8,25 @@
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
+  justify-content: center;
   .contact-button {
     width: 30%;
     height: 100px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .modal-content {
-    width: 60%;
-    height: 60vh;
+    width: 50%;
+    height: 50%;
     background: $dark-blue-color;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1.25rem;
+    gap: 10px;
+    padding: 20px;
     position: relative;
     top: 5vh;
     .top-buttons {
@@ -32,7 +36,6 @@
       width: 100%;
       max-width: 50%;
       margin-left: 50%;
-      padding-top: 1.25rem;
       .close-button {
         background-color: $dark-blue-color;
         border: none;
@@ -44,25 +47,22 @@
       }
     }
   img {
-    height: 300px;
+    height: 50%;
     object-fit: contain;
     object-position: top left;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    margin: 1rem 0;
+    // margin: 1rem 0;
   }
   .prev-button, .next-button {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    padding-top: 0.5rem;
   }
-  p, a {
+  p, span, a {
     font-size: 1rem;
     font-weight: 100;
-    width: 100%;
-    height: 25%;
-  }
-  p {
-    margin-bottom: 1rem;
+    width: 90%;
   }
   .next-button {
     margin-bottom: 1.25rem;
@@ -78,19 +78,16 @@
       width: 1rem;
       height: 1rem;
     } 
-    p, a {
+    p, span, a {
       font-size: 1rem;
     }
   }  
 }
 @include mobile {
   .modal-content {
-    max-height: 50%;    
-    .prev-button, .next-button {
-      width: 0.8rem;
-      height: 0.8rem;
-    } 
-    p {
+    max-height: 60%;    
+    gap: 25px;
+    p, span {
       font-size: 0.6rem;
     }
     a {
@@ -103,5 +100,9 @@
     .next-button {
       margin: 0;
     }
-  }  
+  } 
+  .modal-overlay .contact-button {
+    width: 70%;
+    height: 60px;
+  } 
 }
