@@ -126,6 +126,9 @@
     transform: rotate3d(2, -2, 0.4, 34deg);   
     padding-top: 2.5rem; 
     padding-bottom: 2.5rem;
+    &::-webkit-scrollbar {
+        width: 0;
+      }
    &__image {
         width: 31.25rem;
         margin: 0;
